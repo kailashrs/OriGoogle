@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="io.github.kailashrs.origoogle.permission.CONTROL" android:protectionLevel="signature" />
+    <uses-permission android:name="io.github.kailashrs.origoogle.permission.CONTROL" />
+    <application android:label="OriGoogle" android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.OriGoogle"
+        android:description="@string/module_description">
+        <activity android:name=".ui.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+            </intent-filter>
+        </activity>
+        <service android:name=".ui.WalletTile" android:exported="true" android:label="Google Wallet"
+            android:icon="@drawable/ic_tile_wallet" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter>
+        </service>
+        <service android:name=".ui.LensTile" android:exported="true" android:label="Google Lens"
+            android:icon="@drawable/ic_tile_lens" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter>
+        </service>
+        <service android:name=".ui.GeminiTile" android:exported="true" android:label="Gemini"
+            android:icon="@drawable/ic_tile_gemini" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter><action android:name="android.service.quicksettings.action.QS_TILE" /></intent-filter>
+        </service>
+        <provider android:name="io.github.libxposed.service.XposedProvider"
+            android:authorities="io.github.kailashrs.origoogle.XposedService" android:exported="true" />
+    </application>
+</manifest>

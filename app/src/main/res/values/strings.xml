@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">OriGoogle</string>
+    <string name="module_description">Google features for vivo OriginOS 6 and 7 (China)</string>
+    <string name="status_connecting">Connecting…</string>
+    <string name="status_connecting_detail">Waiting for the Xposed framework</string>
+    <string name="status_active">Module active</string>
+    <string name="status_inactive">Module not active</string>
+    <string name="status_inactive_detail">Enable OriGoogle in Vector (LSPosed) and restart.</string>
+    <string name="status_save_failed">Could not save; is Vector running?</string>
+    <string name="experimental">Experimental</string>
+    <string name="tiles_title">Control center tiles</string>
+    <string name="tiles_summary">Google Wallet, Google Lens and Gemini tiles are available when you edit the control center.</string>
+    <string name="apply_soft_reboot">Soft reboot to apply</string>
+    <string name="apply_launcher">Restart launcher to apply</string>
+    <string name="soft_reboot_title">Soft reboot?</string>
+    <string name="soft_reboot_message">System changes need Android\'s framework to restart. All apps close; root and the phone itself stay up.</string>
+    <string name="soft_reboot_confirm">Soft reboot</string>
+</resources>
