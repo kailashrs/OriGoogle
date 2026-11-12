@@ -53,8 +53,12 @@ object QuickShareHooks {
         // Only a value this module could have written (a GMS component) or none is ours to manage.
         if (!current.isNullOrEmpty() && !current.startsWith("$GMS/")) return
 
-        val target = if (Features.enabled(Features.QUICK_SHARE)) resolve(context.packageManager) else null
+        val enabled = Features.enabled(Features.QUICK_SHARE)
+        val target = if (enabled) resolve(context.packageManager) else null
         if (target == current || (target == null && current.isNullOrEmpty())) return
+        // Recent Play services writes its own component (nearby.sharing.main.MainActivity) once it runs
+        // as a global build; keep it if the lookup misses, e.g. while GMS is still enabling components.
+        if (enabled && target == null) return
         Settings.Secure.putString(resolver, SETTING, target)
         Hooks.info("Quick Share: $SETTING = $target")
     }

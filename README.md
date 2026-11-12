@@ -17,7 +17,7 @@ Non-Google fixes for OriginOS live in the companion module
 | | |
 | --- | --- |
 | Device | vivo X200 Ultra (PD2454), China firmware |
-| OS | OriginOS 6 (Android 16) and OriginOS 7 (Android 17, checked on 17.2.10.6 / launcher 17.0.0.381) |
+| OS | OriginOS 6 (Android 16) and OriginOS 7 (Android 17, checked on 17.2.11.5 / launcher 17.0.0.402) |
 | Framework | Any libxposed API 102 framework; developed on Vector |
 | Google apps | Google Play services, Google app, Gemini (for the assistant features) |
 
@@ -35,7 +35,7 @@ Each feature can be switched on or off in the OriGoogle app.
 | **Circle to Search** | On | Long-press the gesture handle to search anything on screen with Google Lens. |
 | **Corner swipe for assistant** | On | Adds a **Google Assistant** choice to the bottom-left and bottom-right corner options in Settings › System navigation (Interaction Cube). Swiping up from that corner opens Gemini. Your other corner actions are kept. |
 | **Hold power for assistant** | On | Holding the power button opens Gemini instead of Jovi. |
-| **Google Discover** *(experimental)* | Off | Shows Google Discover on the leftmost home screen instead of vivo's left screen. |
+| **Google Discover** *(experimental)* | Off | Shows Google Discover on the leftmost home screen instead of vivo's left screen. **Smart Launcher** must also be turned on in the launcher settings. |
 | **Control center tiles** | Always | Google Wallet, Google Lens and Gemini tiles you can add when editing the control center. |
 
 Not possible yet: AirDrop interop in Quick Share. Google enables it per device model (it reached the vivo X300 Ultra in April 2026), and it reportedly needs Wi-Fi that supports AWDL. The PD2454 China build's `qca_cld3` driver has no AWDL code. Quick Share's QR-code and cloud fallback for Apple devices works without it.
